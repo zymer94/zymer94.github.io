@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+p.bahns {
+   font-family: Bahnschrift;
+   src: url(bahnschrift.ttf);
+   font-size: 25px;
+}
+
+* {
+   font-family: Bahnschrift;
+}
+
+/* Cuadro Menú lateral deslizable */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body {font-family: sans-serif;}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  color: white;
+}
+
+.sidenav a:hover {
+  color: black;
+  background-color: #a80000;
+  
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 80px;
+  background-color: black;
+  color: white;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* Establecer color de fondo */
+body {
+  background-color: #000;
+}
+
+
+/* Recuadro Encabezado Negro */
+div.title {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-family: Bahnschrift;
+  padding: 20px;
+}
+
+/* Cuerpo Parráfo */
+div.paragraph {
+  background-color: #6db502;
+  color: black;
+  text-align: justify;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  padding: 50px;
+}
+
+/* Cuerpo Frase */
+div.quote {
+  background-color: #aaa;
+  color: black;
+  text-align: justify;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+
+/* Titulo CutOut */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: sans-serif;}
+
+.image-container {
+  background-image: url("../images/cutout11.jpg");
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 80px;
+  font-family: "Segoe UI"; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+/* Bloquear todas las Imagenes al Centro */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Descripción de la Imagen*/ 
+div.gallery {
+	width: 50%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+
+div.desc {
+  padding: 15px;
+  background-color: #333;
+  color: #ddd;
+  text-align: center;
+  font-size: 20px;
+}
+
+div.black {
+	background-color: black;
+}
+
+/* Botón */
+.btn {
+  border 3px solid black;
+  background-color: black;
+  color: black;
+  padding: 15px 50px; 
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+	transition: 0.3s;
+  background-color: #a80000;
+  color: black;
+}
+
+.success {
+  border-color: white;
+  color: white;
+}
+
+.poss1 {
+	position: absolute;
+  left: 20%;
+  margin-top: 2%;
+}
+
+.poss2 {
+	position: absolute;
+  left: 70%;
+  margin-top: 2%;
+}
+
+.poss3 {
+	position: absolute;
+  left: 40%;
+ 	margin-top: 2%;
+}
+
+/* Biografía */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 2s;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  margin-top: 3%;
+  left: 50%;
+  font-size: 55px;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: Bahnschrift;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#text2{
+  position: absolute;
+  margin-top: 12%;
+  left: 50%;
+  font-size: 20px;
+  text-align: justify;
+  color: #bfbfbf;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Introducción</a>
+  <a href="2 - el-proposito-de-berners-lee.html">El Propósito de Tim Berners-Lee</a>
+  <a href="3 - el-legado-de-bush.html">El Legado de Bush</a>
+  <a href="4 - el-proyecto-xanadu.html">El Proyecto XANADU</a>
+  <a href="5 - la-red-intergalactica.html">La Red Intergaláctica</a>
+  <a href="6 - todo-esta-conectado.html">Todo está Conectado</a>
+  <a href="7 - en-las-redes-de-la-telaraña.html">En las Redes de la Telaraña</a>
+  <a href="8 - la-infraestructura-de-la-web.html">La Infraestructura de la Web</a>
+  <a href="9 - la-guerra-de-los-navegadores.html">La Guerra de los Navegadores</a>
+  <a href="10 - la-evolucion-es-lo-mas-esencial.html">La Evolución es lo más Esencial</a>
+  <a href="11 - el-futuro-se-torna-incierto.html">El Futuro se torna Incierto</a>
+</div>
+
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Indice</span>
+    
+  <div class="title">EL LEGADO DE VANNEVAR BUSH</div>
+
+  <div class="image-container">
+    <div class="text">VANNEVAR BUSH</div>
+  </div>  
+
+  <div class="paragraph">
+  	Vannevar Bush, un prestigioso científico norteamericano, en julio de 1945 publicó un artículo denominado <b>“As we may think”</b>
+  	(Como nosotros pensamos). En este texto describía un dispositivo al cual nombró <b>Memex</b> (Memoria Extendida), 
+  	que tenía la función de almacenar gran cantidad de información, donde el usuario podía acceder a esta con rapidez y flexibilidad, 
+  	utilizando el <b>uso de vínculos</b> que los unía en forma no secuencial. 
+  </div>
+
+	  
+  <div class="gallery">
+  	<img src="../images/vannevar-desk.jpg" alt="Vannevar in a desk" width="50%" height="50%">
+    <div class="desc">Vannevar Bush en su escritorio</div>
+	</div>
+  
+  <div class="paragraph"> 
+  	Los conceptos futuristas de Bush eran mucho más avanzados que la tecnología que existía en su época, 
+  	por lo que no tuvo la oportunidad de plasmar sus ideas a la realidad. 
+  </div>
+  
+  
+ 	<div class="gallery">
+  	<img src="../images/memex.jpg" alt="Robert in Desk" width="50%" height="50%">
+  	<div class="desc">Una breve descripción del funcionamiento de Memex, publicada en la revista TIME</div>
+	</div>
+	
+	<div id="overlay" onclick="off()">
+		<p> <br> <br> </p>
+		<img src="../images/bush.png" alt="Proyecto Xanadu" position="50px" >
+	  <div id="text"><b>VANNEVAR BUSH</b></div>
+	  <div id="text2"> <br> Ted nació en 1937 cerca de una aldea de Greenwich, Nueva York y fue el primero en acuñar el término Hipertexto en 1965. 
+	  	Su afición de coleccionar infinidad de objetos le condujo al mundo computacional. Obtuvo su licenciatura en Filosofía 
+	  	por la Universidad de Swarthmore en 1959. Realizó maestría en Sociología en Harvard en 1963 y concluyó su doctorado en 
+	  	Keio para el 2002. Actualmente es profesor honorario de Wadham College de Oxford y miembro de Oxford Internet Institute, 
+	  	donde realiza sus investigaciones.
+	  </div>
+	</div>
+	
+	<button class="btn success poss3" onclick="on()">Biografía Vannevar Bush</button>
+  
+  <button class="btn success poss1" onclick= "location.href = '2 - el-proposito-de-berners-lee.html'" >Regresar</button>
+  <button class="btn success poss2" onclick= "location.href = '4 - el-proyecto-xanadu.html'" >Siguiente</button>
+  
+  
+  <div class="desc black"> <br> <br> <br> <br> <br> Investigado y Programado por: Joel Alfonso Álvarez del Castillo Romo</div>
+  
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "320px";
+  document.getElementById("main").style.marginLeft = "320px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+</script>
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+p.bahns {
+   font-family: Bahnschrift;
+   src: url(bahnschrift.ttf);
+   font-size: 25px;
+}
+
+* {
+   font-family: Bahnschrift;
+}
+
+/* Cuadro Menú lateral deslizable */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body {font-family: sans-serif;}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  color: white;
+}
+
+.sidenav a:hover {
+  color: black;
+  background-color: #a80000;
+  
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 80px;
+  background-color: black;
+  color: white;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* Establecer color de fondo */
+body {
+  background-color: #000;
+}
+
+
+/* Recuadro Encabezado Negro */
+div.title {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-family: Bahnschrift;
+  padding: 20px;
+}
+
+/* Cuerpo Parráfo */
+div.paragraph {
+  background-color: #c72487;
+  color: black;
+  text-align: justify;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  padding: 50px;
+}
+
+/* Cuerpo Frase */
+div.quote {
+  background-color: #ad71aa;
+  color: black;
+  text-align: justify;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+
+
+/* Titulo CutOut */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: sans-serif;}
+
+.image-container {
+  background-image: url("../images/cutout15.jpg");
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 90px;
+  font-family: "Segoe UI"; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+/* Bloquear todas las Imagenes al Centro */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Descripción de la Imagen*/ 
+div.gallery {
+	width: 50%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  background-color: #333;
+  color: #ddd;
+  text-align: center;
+  font-size: 20px;
+}
+
+div.black {
+	background-color: black;
+}
+
+/* Botón */
+.btn {
+  border 3px solid black;
+  background-color: black;
+  color: black;
+  padding: 15px 50px; 
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+	transition: 0.3s;
+  background-color: #a80000;
+  color: black;
+}
+
+.success {
+  border-color: white;
+  color: white;
+}
+
+.poss1 {
+	position: absolute;
+  left: 20%;
+  margin-top: 2%;
+}
+
+.poss2 {
+	position: absolute;
+  left: 70%;
+  margin-top: 2%;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Introducción</a>
+  <a href="2 - el-proposito-de-berners-lee.html">El Propósito de Tim Berners-Lee</a>
+  <a href="3 - el-legado-de-bush.html">El Legado de Bush</a>
+  <a href="4 - el-proyecto-xanadu.html">El Proyecto XANADU</a>
+  <a href="5 - la-red-intergalactica.html">La Red Intergaláctica</a>
+  <a href="6 - todo-esta-conectado.html">Todo está Conectado</a>
+  <a href="7 - en-las-redes-de-la-telaraña.html">En las Redes de la Telaraña</a>
+  <a href="8 - la-infraestructura-de-la-web.html">La Infraestructura de la Web</a>
+  <a href="9 - la-guerra-de-los-navegadores.html">La Guerra de los Navegadores</a>
+  <a href="10 - la-evolucion-es-lo-mas-esencial.html">La Evolución es lo más Esencial</a>
+  <a href="11 - el-futuro-se-torna-incierto.html">El Futuro se torna Incierto</a>
+</div>
+
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Indice</span>
+    
+  <div class="title">EL PROPÓSITO DE TIM BERNERS-LEE</div>
+
+  <div class="image-container">
+    <div class="text">BERNERS-LEE</div>
+  </div>  
+
+  <div class="paragraph">
+  	Tim nació el 8 de junio de 1955 al sudoeste de Londres, Reino unido. Sus padres <b> Conway Berners y Mary Lee Woods </b>
+  	trabajaban como matemáticos para la empresa Ferranti, formando parte del equipo que construyó el <b> Manchester Mark I</b>, 
+  	el primer ordenador comercial con programas almacenados.  <br> 
+  </div>
+
+	  
+  <div class="gallery">
+  	<img src="../images/baby-tim.jpg" alt="Mary Lee Woods with Tim Berners-Lee" width="50%" height="50%">
+    <div class="desc">Una fotografía de Mary Lee Woods junto a su hijo Tim</div>
+	</div>
+  
+  <div class="paragraph"> 
+  	Timothy John Berners-Lee se graduó de Física del Queen’s College, perteneciente a la Universidad de Oxford, 
+  	a sus veintiún años. En 1980 trabajó en el <b> CERN </b> durante 6 meses, periodo en el que propuso utilizar el <b>hipertexto</b>
+  	como medio para facilitar la comunicación inmediata entre los investigadores del laboratorio. <br> <br>
+  	En diciembre de 1980 renunció, consiguiendo empleo en John Poole Image Computer Systems Ltd, pero cuatro años más tarde, 
+  	regresó al CERN para concretar con su propósito: unificar al Internet y demostrar que, en realidad, todo está estrechamente conectado.
+  </div>
+  
+  
+ 	<div class="gallery">
+  	<img src="../images/tim-cern.jpg" alt="Berners-Lee in front to PC of CERN" >
+  	<div class="desc">Tim Berners-Lee frente al proyecto WWW en los laboratorios del CERN</div>
+	</div>
+  
+  <button class="btn success poss1" onclick= "location.href = '../index.html'" >Regresar</button>
+  <button class="btn success poss2" onclick= "location.href = '3 - el-legado-de-bush.html'" >Siguiente</button>
+  
+  
+  <div class="desc black"> <br> <br> <br> <br> <br> Investigado y Programado por: Joel Alfonso Álvarez del Castillo Romo</div>
+  
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "320px";
+  document.getElementById("main").style.marginLeft = "320px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+</script>
+
+
+
+</body>
+</html>

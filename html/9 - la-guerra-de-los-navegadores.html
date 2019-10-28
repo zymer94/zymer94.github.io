@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+p.bahns {
+   font-family: Bahnschrift;
+   src: url(bahnschrift.ttf);
+   font-size: 25px;
+}
+
+* {
+   font-family: Bahnschrift;
+}
+
+/* Cuadro Menú lateral deslizable */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body {font-family: sans-serif;}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  color: white;
+}
+
+.sidenav a:hover {
+  color: black;
+  background-color: #a80000;
+  
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 80px;
+  background-color: black;
+  color: white;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* Establecer color de fondo */
+body {
+  background-color: #000;
+}
+
+
+/* Recuadro Encabezado Negro */
+div.title {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-family: Bahnschrift;
+  padding: 20px;
+}
+
+div.subtitle {
+  background-color: #b52121;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: Bahnschrift;
+  padding: 70px;
+}
+
+div.subtitle2 {
+  background-color: #0d5b8c;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-family: Bahnschrift;
+  padding: 20px;
+}
+
+/* Cuerpo Parráfo */
+div.paragraph {
+  background-color: #5a98bf;
+  color: black;
+  text-align: justify;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  padding: 50px;
+}
+
+/* Cuerpo Frase */
+div.quote {
+  background-color: #ffc800;
+  color: black;
+  text-align: justify;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+}
+
+
+/* Titulo CutOut */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: sans-serif;}
+
+.image-container {
+  background-image: url("../images/cutout24.jpg");
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 90px;
+  font-family: "Segoe UI"; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+/* Bloquear todas las Imagenes al Centro */
+img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Descripción de la Imagen*/ 
+div.gallery {
+	width: 50%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+
+div.desc {
+  padding: 15px;
+  background-color: #333;
+  color: #ddd;
+  text-align: center;
+  font-size: 20px;
+}
+
+div.black {
+	background-color: black;
+}
+
+/* Botón */
+.btn {
+  border 3px solid black;
+  background-color: black;
+  color: black;
+  padding: 15px 50px; 
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+	transition: 0.3s;
+  background-color: #a80000;
+  color: black;
+}
+
+.success {
+  color: white;
+}
+
+.poss1 {
+	position: absolute;
+  left: 20%;
+  margin-top: 2%;
+}
+
+.poss2 {
+	position: absolute;
+  left: 70%;
+  margin-top: 2%;
+}
+
+.poss3 {
+	position: absolute;
+  left: 40%;
+ 	margin-top: 2%;
+}
+
+/* Biografía */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 2s;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  margin-top: 3%;
+  left: 50%;
+  font-size: 55px;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: Bahnschrift;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#text2{
+  position: absolute;
+  margin-top: 12%;
+  left: 50%;
+  font-size: 20px;
+  text-align: justify;
+  color: #bfbfbf;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+/* Gallery */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	transition: 0.3s;
+  background-color: #a80000;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #333;
+  font-size: 20px;
+  padding: 20px 30px;
+  color: white;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 15px 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #a80000;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Introducción</a>
+  <a href="2 - el-proposito-de-berners-lee.html">El Propósito de Tim Berners-Lee</a>
+  <a href="3 - el-legado-de-bush.html">El Legado de Bush</a>
+  <a href="4 - el-proyecto-xanadu.html">El Proyecto XANADU</a>
+  <a href="5 - la-red-intergalactica.html">La Red Intergaláctica</a>
+  <a href="6 - todo-esta-conectado.html">Todo está Conectado</a>
+  <a href="7 - en-las-redes-de-la-telaraña.html">En las Redes de la Telaraña</a>
+  <a href="8 - la-infraestructura-de-la-web.html">La Infraestructura de la Web</a>
+  <a href="9 - la-guerra-de-los-navegadores.html">La Guerra de los Navegadores</a>
+  <a href="10 - la-evolucion-es-lo-mas-esencial.html">La Evolución es lo más Esencial</a>
+  <a href="11 - el-futuro-se-torna-incierto.html">El Futuro se torna Incierto</a>
+</div>
+
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Indice</span>
+    
+  <div class="title"><b>LA GUERRA DE LOS NAVEGADORES</b></div>
+
+  <div class="image-container">
+    <div class="text">BROWSER WARS</div>
+  </div>  
+
+  <div class="paragraph">
+		Para que los <b>nuevos usuarios de internet</b> navegaran por la nueva red mundial, debían utilizar el <b>navegador Nexus</b> creado por el equipo de Berners-Lee.
+		Pero con el paso del tiempo, surgieron <b>nuevas necesidades</b> que tenían que suplirse para que la web pudiera expandirse aún más. <br> <br>
+		Por lo que el 30 de abril de 1993, el CERN <b>liberó el código fuente</b> del navegador Nexus bajo el dominio público, convirtiéndolo en software 
+		libre y modificable, permitiendo <b>el nacimiento de otros navegadores web</b>.
+  </div>
+  
+  <p> <br> <br> </p>
+  
+  <div class="subtitle"><b>EPISODIO I: EL DESPERTAR DE LA FUERZA</b></div>
+  
+  <p> <br> <br> </p>
+  
+  <div class="subtitle2"> <b>ViolaWWW</b></div>
+    
+  <div class="paragraph">
+  	Uno de los primeros navegadores en surgir fue el <b>ViolaWWW</b>, el primer navegador web gráfico, desarrollado por </b>Pei-Yuan Wei</b>, 
+  	estudiante de la Universidad de California en Berkley.	Estaba basado en <b>HTML 3.0 </b>, y poseía elementos revolucionarios como la inclusión de un lenguaje de Scripts similar a Javascript, un modelo de objetos 
+  	similar a Document Object Model (DOM), hojas de estilo en cascada similares a CSS, objetos HTML y XML, así como applets.
+  </div>
+  
+	<div class="container">
+  	<div class="mySlides">  <img src="../images/violaWWW.gif"> <h2 style="text-align:center">Guía de Usuario</h2> </div>
+  	<div class="mySlides">  <img src="../images/violaWWW1.jpg"> <h2 style="text-align:center">Página de Inicio</h2> </div>
+  	<div class="mySlides">  <img src="../images/violaWWW2.gif"> <h2 style="text-align:center">Visualización de Tablas</h2> </div>
+  	<div class="mySlides">  <img src="../images/violaWWW3.jpg"> <h2 style="text-align:center">Muestra de Imágenes</h2> </div>      
+  	<div class="mySlides">  <img src="../images/violaWWW4.jpg"> <h2 style="text-align:center">Visualización de archivos XPlot</h2> </div>  
+			
+		<div class="row">
+			<div style="text-align:center">				  			
+  			<span class="dot" onclick="currentSlide(1)"></span>
+  			<span class="dot" onclick="currentSlide(2)"></span> 
+  			<span class="dot" onclick="currentSlide(3)"></span> 
+  			<span class="dot" onclick="currentSlide(4)"></span>
+  			<span class="dot" onclick="currentSlide(5)"></span>
+			</div>
+		</div>
+		<h3 style="text-align:center;color:#999" >Presiona un punto para mostrar la imagen</h3>		
+	</div>
+  
+  <p> <br> <br> </p>
+  <div class="subtitle2"> <b>Cello</b></div>
+  
+  <div class="paragraph"> 
+  	Le siguieron otros navegadores como el <b>Cello</b>, desarrollado por <b>Thomas R. Bruce</b> del Instituto de Información Legal de la Universidad Cornell. 
+  	Este fue el primer navegador gráfico para Windows 3.1. Cello fue creado debido a la demanda existente de acceso a la Web por parte de abogados, 
+  	quienes empleaban preferentemente sistemas Windows frente Unix. La <b>inexistencia de navegadores web para Windows</b> impedía a muchos expertos legales 
+  	el acceso a la información de la WWW. Esto genero que <b>Cello fuera sumamente popular entre 1993 y 1994 </b>, pero cayó progresivamente en desuso tras la 
+  	publicación de Mosaic.
+  </div>
+    
+ 	<div class="gallery">
+  	<img src="../images/cello.jpg" alt="Navegador Cello" width="50%" height="50%">
+  	<div class="desc">El Primer Navegador para Windows</div>
+	</div>
+	
+	<p> <br> </p>
+  <div class="subtitle2"> <b>Mosaic</b></div>
+  
+  <div class="paragraph"> 
+  	<b>Marc Andreessen y Eric Bina</b> desarrollaron durante su estadía en el National Center for Supercomputing Applications (NCSA) el <b>navegador Mosaic</b>, 
+  	convirtiéndose en el segundo navegador disponible para los sistemas operativos Unix, Macintosh y Windows. Su popularidad se debió a su capacidad 
+  	de acceder a servicios web HTTP, una interfaz con aspecto gráfico cuidado (para aquel entonces), y la posibilidad de acceso adicional a Gopher, 
+  	File Transfer Protocol (FTP) y Usenet News mediante NNTP. 
+  </div>
+  
+  <div class="container">
+  	<div class="mySlides">  <img src="../images/mosaic1.jpg" > <h2 style="text-align:center">Página de Inicio en Windows 95 </h2> </div>
+  	<div class="mySlides">  <img src="../images/mosaic2.jpg" > <h2 style="text-align:center">Visualización Página de Yahoo! en el año 2000 </h2> </div>
+  	<div class="mySlides">  <img src="../images/mosaic3.jpg" > <h2 style="text-align:center">Mosaic v2.7 en Unix</h2> </div>
+  	<div class="mySlides">  <img src="../images/mosaic4.jpg" > <h2 style="text-align:center">Documento de la historia de Mosaic </h2> </div>      
+  	<div class="mySlides">  <img src="../images/mosaic5.gif" > <h2 style="text-align:center">Acerca de Mosaic v2.1 en Windows</h2> </div>  
+      			
+		<div class="row">
+			<div style="text-align:center">				  			
+  			<span class="dot" onclick="currentSlide(6)"></span>
+  			<span class="dot" onclick="currentSlide(7)"></span> 
+  			<span class="dot" onclick="currentSlide(8)"></span> 
+  			<span class="dot" onclick="currentSlide(9)"></span>
+  			<span class="dot" onclick="currentSlide(10)"></span>
+			</div>
+		</div>
+		<h3 style="text-align:center;color:#999" >Presiona un punto para mostrar la imagen</h3>
+	</div>
+  
+  <p> <br> <br> </p>
+  <div class="subtitle2"> <b>Netscape</b></div>
+     
+	<div class="paragraph"> 
+		La compañía <b>Netscape Comunications</b>, creada por el mismo creador de Mosaic, <b>Marc Andreessen</b>, desarrolló el navegador <b>Netscape</b> para diciembre de 1994. 
+		<i>El objetivo de Netscape era destruir a Mosaic</i>, por lo que dentro de su nombre código era <b>Mozilla</b>, originado con la unión de Mosaic y Killer, 
+		además de su sonoridad similar a Godzilla. Con el paso de los meses, Netscape estableció su propia mascota llamada Mozilla, un lagarto verde con 
+		crestas moradas, que posteriormente se volvería rojo. Fue cuestión de tiempo en que <b>Netscape se volviera el navegador más utilizado</b>, remplazando 
+		el dominio mundial de Mosaic.
+	</div>
+	
+	<div class="container">
+  	<div class="mySlides">  <img src="../images/nest1.png"> <h2 style="text-align:center">Mosaic Nestcape v0.9 beta</h2> </div>
+  	<div class="mySlides">  <img src="../images/nest2.png"> <h2 style="text-align:center">Manual Online del Usuario</h2> </div>
+  	<div class="mySlides">  <img src="../images/nest3.png"> <h2 style="text-align:center">Nestcape v1.0N 1994 </h2> </div>
+  	<div class="mySlides">  <img src="../images/nest4.jpg"> <h2 style="text-align:center">Nestcape v0.9 beta en Unix</h2> </div>      
+  	<div class="mySlides">  <img src="../images/nest5.png"> <h2 style="text-align:center">Nestcape v2.02 en Windows XP</h2> </div>  
+		<div class="mySlides">  <img src="../images/nest6.gif"> <h2 style="text-align:center">Nestcape v3.01 en Unix</h2> </div>
+		<div class="mySlides">  <img src="../images/nest7.png"> <h2 style="text-align:center">Nestcape v4.04 en Windows 2000 </h2> </div>
+		<div class="mySlides">  <img src="../images/nest8.png"> <h2 style="text-align:center">Nestcape v6.02 en Windows XP SP2 </h2> </div>
+		<div class="mySlides">  <img src="../images/nest9.png"> <h2 style="text-align:center">Nestcape v7.12 en Windows XP</h2> </div>
+		<div class="mySlides">  <img src="../images/nest10.png"> <h2 style="text-align:center">Nestcape v8.0 en Ubuntu 9 </h2> </div>
+		<div class="mySlides">  <img src="../images/nest11.png"> <h2 style="text-align:center">Nestcape v2.02 en Windows 7</h2> </div>
+		
+			
+		<div class="row">
+			<div style="text-align:center">				  			
+  			<span class="dot" onclick="currentSlide(11)"></span>
+  			<span class="dot" onclick="currentSlide(12)"></span> 
+  			<span class="dot" onclick="currentSlide(13)"></span> 
+  			<span class="dot" onclick="currentSlide(14)"></span>
+  			<span class="dot" onclick="currentSlide(15)"></span>
+  			<span class="dot" onclick="currentSlide(16)"></span>
+  			<span class="dot" onclick="currentSlide(17)"></span>
+  			<span class="dot" onclick="currentSlide(18)"></span>
+  			<span class="dot" onclick="currentSlide(19)"></span>
+  			<span class="dot" onclick="currentSlide(20)"></span>
+  			<span class="dot" onclick="currentSlide(21)"></span>
+			</div>
+		</div>
+		<h3 style="text-align:center;color:#999" >Presiona un punto para mostrar la imagen</h3>	
+	</div>	
+	
+	<p> <br> <br> </p>
+  <div class="subtitle"><b>EPISODIO II: LA GUERRA DE LOS CLONES</b></div>
+  
+  <p> <br> <br> </p>
+  <div class="subtitle2"> <b>Internet Explorer</b></div>
+  
+  <div class="paragraph">
+  	<b>Internet Explorer</b> hacía su aparición en 1995, desarrollado por <b>Thomas Reardon</b> y dirigido por <b>Benjamín Slivka</b>, proyecto perteneciente a la 
+  	compañía <b>Microsoft</b>. Para su creación, se utilizó el código fuente de una versión comercial de <b>Mosaic</b>, perteneciente a la empresa Spyglass. 
+  	El propósito era crear un <b>navegador propio de Microsoft</n>, donde fuera incluido en el sistema operativo Windows, volviéndose en la competencia 
+  	directa de <b>Netscape</b>.
+  </div> 
+  
+  <div class="gallery">
+  	<img src="../images/i-e-1.jpg" alt="Internet Central v1" width="50%" height="50%">
+  	<div class="desc">La primera versión de este navegador se llamaba Microsoft Internet Central</div>
+	</div> 
+  
+  <div class="paragraph">
+  	</b> <b>Internet Explorer y Netscape</b> pasaron un tiempo dándole prioridad a introducir <b>nuevas características o funcionalidades</b> (para competir contra su rival) 
+  	en vez de <b>corregir errores</b>, produciendo navegadores inestables, estándares de desarrollo web “movedizos” alejados de los protocolos de la W3C, 
+  	así como agujeros en la seguridad e <b>incompatibilidad</b> con muchas páginas webs. <br> <br> 
+  	Debido a esta guerra entre navegadores, muchos sitios web acababan creando <b>dos versiones</b> para cada navegador web, o decidir por hacer solo uno 
+  	y acabar colocando un texto que informaba para qué navegador fue diseñada la página web. Otra de las consecuencias de esta batalla, fue que los 
+  	sitios webs terminaran analizando la identificación del navegador del usuario antes de mostrar la página. 
+  </div> 
+  
+  <div class="gallery">
+  	<img src="../images/i-e-2.png" alt="Internet Explorer v2" width="50%" height="50%">
+  	<div class="desc">Internet Explorer v1.02 en Windows NT 4.0 </div>
+	</div>
+  
+  <div class="paragraph">
+  	</b> Tras varios años de desarrollo, <b>Internet Explorer 5 se adelantó a Netscape 5</b> (el cual nunca llegó a salir) sacando novedades y 
+  	características que llamaron la atención de los usuarios, además de que venía <b>instalado por defecto</b> en los nuevos sistemas operativos Windows, 
+  	por lo que los usuarios no tenían la necesidad de instalar otro navegador. <br> <br> <b>Internet Explorer resultó el vencedor</b> tras una serie de acciones que 
+  	“le cortaron el suministro de aire” a Netscape. Esto junto a las malas decisiones tomadas por la empresa, hizo que para finales de 1998 terminara 
+  	en bancarrota, siendo adquirida después por AOL Inc., por la suma de 4.2 millones de dólares. 
+  </div> 
+  
+ 
+	<div class="container">
+  	<div class="mySlides">  <img src="../images/ie3.png"> <h2 style="text-align:center">Buscando en Google la página de Facebook</h2> </div>
+  	<div class="mySlides">  <img src="../images/ie4.png"> <h2 style="text-align:center">Internet Explorer 4.0 con la página de Wikipedia al fondo</h2> </div>
+  	<div class="mySlides">  <img src="../images/ie5.png"> <h2 style="text-align:center">Internet Explorer 4.0 en Unix</h2> </div>
+  	<div class="mySlides">  <img src="../images/ie6.gif"> <h2 style="text-align:center">Versión 3.2 para MacOS</h2> </div>      
+  	<div class="mySlides">  <img src="../images/ie7.png"> <h2 style="text-align:center">Internet Explorer v7 para Windows XP SP3</h2> </div>  
+		<div class="mySlides">  <img src="../images/ie8.png"> <h2 style="text-align:center">La version 8.0 salió en Abril del 2011</h2> </div>
+		<div class="mySlides">  <img src="../images/ie9.jpg"> <h2 style="text-align:center">Página principal del buscador Bing</h2> </div>
+		<div class="mySlides">  <img src="../images/ie10.png"> <h2 style="text-align:center">Versión 10 para Windows Vista </h2> </div>
+		<div class="mySlides">  <img src="../images/ie11.png"> <h2 style="text-align:center">La última versión creada de este Navegador</h2> </div>
+			
+		<div class="row">
+			<div style="text-align:center">				  			
+  			<span class="dot" onclick="currentSlide(22)"></span>
+  			<span class="dot" onclick="currentSlide(23)"></span> 
+  			<span class="dot" onclick="currentSlide(24)"></span> 
+  			<span class="dot" onclick="currentSlide(25)"></span>
+  			<span class="dot" onclick="currentSlide(26)"></span>
+  			<span class="dot" onclick="currentSlide(27)"></span>
+  			<span class="dot" onclick="currentSlide(28)"></span>
+  			<span class="dot" onclick="currentSlide(29)"></span>
+  			<span class="dot" onclick="currentSlide(30)"></span>
+  		</div>
+		</div>
+		<h3 style="text-align:center;color:#999" >Presiona un punto para mostrar la imagen</h3>	
+	</div>
+
+  <p> <br> <br> </p>
+  <div class="subtitle"><b>EPISODIO III: LA AMENAZA FANTASMA</b></div>
+  
+  <div class="paragraph">
+  	<b>Netscape reconoció su derrota</b>, por lo que publicó el código fuente de su inacabada versión 5, permitiendo <b>el nacimiento de la Fundación Mozilla</b>, 
+  	quienes retomaron el desarrollo de Netscape, reescribiendo el código y creando para 2002 el nuevo navegador <b>Mozilla Application Suite</b>. <br> <br>
+		A penar del nuevo comienzo, Mozilla Application Suite tomó un rumbo incierto, por lo que se creó una rama experimental coordinada por <b>Dave Hyatt, Joe Hewitt y Blake Ross</b>, 
+		donde surgió <b>Mozilla Firefox</b>, surgiendo con mucha fuerza, junto a su eslogan <b>“Resurgiendo de sus cenizas”</b>. 
+  </div> 
+  
+  <div class="gallery">
+  	<img src="../images/moz9.jpg" alt="Mozilla Phoenix" width="50%" height="50%">
+  	<div class="desc">Originalmente se iba a llamar Mozilla Phoenix, pero porque ya existia una compañia con ese nombre
+  		tuvieron que cambiar el nombre. Obtaron por Firebird, pero otra empresa tecnológica ya tenía registrado.
+  		Para no alejarse demasiado se quedaron con Firefox.</div>
+	</div>
+  
+  <p> <br> <br> </p>
+  <div class="subtitle"><b>EPISODIO IV: EL RETORNO DEL PHOENIX</b></div>
+  
+  <p> <br> <br> </p>
+  <div class="subtitle2"> <b>Mozilla Firefox</b></div>
+  
+  <div class="paragraph">
+  	El <b>nacimiento de Firefox</b>, sus características y mejoras considerables hacen <b>mucho daño a Internet Explorer</b>, el cual se había quedado 
+  	obsoleto en la versión 6, con muchos <b>errores sin corregir</b>, y graves problemas de seguridad. <br> <br>
+  	Firefox implementó el sistema de <b>renderizado Gecko</b> (diseñado inicialmente para Mozilla Application Suite), que le permitía aumentar considerablemente 
+  	la <b>velocidad de la navegación</b>, así como la implementación de <b>pestañas en el navegador</b>. Esto le permitió un mejor posicionamiento mundial, 
+  	por lo que poco a poco se redujo el uso de Internet Explorer.
+  </div> 
+  
+  
+	<div class="container">
+  	<div class="mySlides">  <img src="../images/moz1.jpg"> <h2 style="text-align:center">Mozilla Firefox v14.2 en Windows 2000 </h2> </div>
+  	<div class="mySlides">  <img src="../images/moz2.webp"> <h2 style="text-align:center">Mozilla Application Suite en Windows XP</h2> </div>
+  	<div class="mySlides">  <img src="../images/moz3.png"> <h2 style="text-align:center">Mozilla Aplication Suite en MacOS</h2> </div>
+  	<div class="mySlides">  <img src="../images/moz4.jpg"> <h2 style="text-align:center">Mozilla Firefox v46.0 en Uuntu 9</h2> </div>      
+  	<div class="mySlides">  <img src="../images/moz5.jpg"> <h2 style="text-align:center">Firefox fue de los primeros navegadores en tener una barra de herramientas lateral</h2> </div>  
+		<div class="mySlides">  <img src="../images/moz6.png"> <h2 style="text-align:center">Firefox le ganaba en rendimiento a Safari en el sistema operativo MacOS</h2> </div>
+		<div class="mySlides">  <img src="../images/moz7.jpg"> <h2 style="text-align:center">Con el paso de los años, crearon su propio sistema operativo para móviles, bautizándolo como FirefoxOS</h2> </div>
+					
+		<div class="row">
+			<div style="text-align:center">				  			
+  			<span class="dot" onclick="currentSlide(31)"></span>
+  			<span class="dot" onclick="currentSlide(32)"></span> 
+  			<span class="dot" onclick="currentSlide(33)"></span> 
+  			<span class="dot" onclick="currentSlide(34)"></span>
+  			<span class="dot" onclick="currentSlide(35)"></span>
+  			<span class="dot" onclick="currentSlide(36)"></span>
+  			<span class="dot" onclick="currentSlide(37)"></span>
+  		</div>
+		</div>
+		<h3 style="text-align:center;color:#999" >Presiona un punto para mostrar la imagen</h3>	
+	</div>
+  
+  <p> <br> <br> </p>
+  <div class="subtitle"><b>EPISODIO V: EL IMPERIO CONTRATACA</b></div>
+  
+  <div class="paragraph">
+  	El 14 de octubre de 1996, la <b>comunidad KDE</b> desarrolla el navegador <b>Konqueror</b> (conquistador), 
+  	utilizando el motor <b>Javascript KJS</b> y el motor de renderizado <b>web KHTML</b> (desarrollado por KDE). <br> <br>
+  	Este navegador no fue muy popular, pero <b>Steve Jobs</b> se interesó tanto en el motor KHTML, que lo utilizó para desarrollar 
+  	<b>WebKit</b>, volviéndose este el <b>núcleo de Safari</b>, el navegador por defecto de todos los sistemas iOS, de <b>Apple</b>.
+		Aunque comenzó WebKit como un producto interno de Apple, en 2005 publicaron el software como libre, convirtiéndolo en uno de los 
+		<b>principales motores web</b>, que propició a a la creación de nuevos navegadores.
+ 
+  </div> 
+  
+  <div class="gallery">
+  	<img src="../images/webkit.png" alt="WebKit Develov" width="50%" height="50%">
+  	<div class="desc">Al momento en que Apple convirtió OpenSource a WebKit, se permitió crear nuevos motores web</div>
+	</div>
+  
+  
+  <p> <br> <br> </p>
+  <div class="subtitle"><b>EPISODIO VI: EL ATAQUE DE LOS CHROMES</b></div>
+  
+  <p> <br> <br> </p>
+  <div class="subtitle2"> <b>Google Chrome</b></div>
+  
+  <div class="paragraph">
+  	Cuando Internet Explorer dominaba el mercado, <b>Google</b> apenas se consolidaba como uno de los <b>buscadores web 
+  	principales</b> de la época. Fundado por <b>Larry Page y Sergey Brin</b>, Google poco a poco aumentaba su capital gracias a la 
+  	<b>publicidad pagada</b> de sus búsquedas. Cada ves que un usuario, independientemente del navegador que utilizara, 
+  	<b>buscaba algo por medio de Google</b>, este <b>cobraba</b> una cierta comisión <b>por posicionar</b> a esa página web al principio de la lista, 
+  	de la misma manera que se le otorgaba <b>otra comisión</b> al navegador utilizado. <br> <br>
+  	Es por ello que cuando Internet Explorer dominaba el mercado, <b>Google apoyo a la Fundación Mozilla para que fuera este 
+  	navegador el más utilizado en esa época</b>. De esta manera, Google ya no tenía que pagar una cantidad millonaria extra a Microsoft. 
+  </div> 
+  
+  <div class="gallery">
+  	<img src="../images/google1.webp" alt="Larry Page y Sergey Brin" width="50%" height="50%">
+  	<div class="desc">Larry Page y Sergey Brin en su cochera que utilizaban como oficina en los inicios de Google (1998) </div>
+	</div>
+  
+  <div class="paragraph">
+  	Para 2008, <b>Google</b> ya consolidada como una de las <b>empresas más importantes del mundo</b>, publica su <b>navegador Chrome</b>, 
+  	basado del proyecto libre <b>Chromium</b>, propio de Google. Pero tras la salida del <b>motor WebKit</b> de Apple, Google desarrolla 
+  	en el 2013 el <b>motor de renderizado Blink</b>, por lo que Chrome se muda a este motor, aumentando considerablemente sus 
+  	beneficios contra la competencia existente. <br> <br>
+		Actualmente cuenta con más de <b>750 millones de usuarios</b>, tanto como en computadoras, portátiles y dispositivos móviles. 
+		Posee una cuota del <b>mercado del 54%</b>, convirtiéndolo en el <b>navegador más utilizado en todo el planeta</b>.
+  </div> 
+  
+	<div class="container">
+  	<div class="mySlides">  <img src="../images/ch1.jpg"> <h2 style="text-align:center">Google Chrome v1.2 para Windows 7 </h2> </div>
+  	<div class="mySlides">  <img src="../images/ch2.png"> <h2 style="text-align:center">Se rediseñó el encabezado, con el fin de añadirle mejor aspecto a Chrome</h2> </div>
+  	<div class="mySlides">  <img src="../images/ch3.jpg"> <h2 style="text-align:center">Implementaron Temas como manera de personalización a la Interfaz</h2> </div>
+  	<div class="mySlides">  <img src="../images/ch4.jpg"> <h2 style="text-align:center">El desarrollo del HTML5 permitió la creación de aplicaciones web</h2> </div>      
+  	<div class="mySlides">  <img src="../images/ch5.jpg"> <h2 style="text-align:center">Chrome es el navegador más utilizado en dispositivos Android</h2> </div>  
+							
+		<div class="row">
+			<div style="text-align:center">				  			
+  			<span class="dot" onclick="currentSlide(38)"></span>
+  			<span class="dot" onclick="currentSlide(39)"></span> 
+  			<span class="dot" onclick="currentSlide(40)"></span> 
+  			<span class="dot" onclick="currentSlide(41)"></span>
+  			<span class="dot" onclick="currentSlide(42)"></span>
+  		</div>
+		</div>
+		<h3 style="text-align:center;color:#999" >Presiona un punto para mostrar la imagen</h3>	
+	</div>
+  
+  
+  <p> <br> <br> </p>
+  <div class="subtitle"><b>EPISODIO VII: UNA NUEVA ESPERANZA</b></div>
+    
+  <div class="paragraph">
+  	Existen otros navegadores web que nacieron durante esta guerra, como es el caso de <b>Opera</b>. Nacida en 1995 como <b>navegador de pago</b>, 
+  	pero con el paso del tiempo logró subsistir por su <b>publicidad embebida</b>. Actualmente utiliza el <b>motor Blink de Google</b>, permitiéndole 
+  	ser un navegador bastante querido por sus allegados. <br> <br>
+		De igual manera, <b>Microsoft</b> desarrolló el <b>navegador Edge</b>, como una manera de regresar a esta guerra, pero al software le falta <b>demasiado 
+		camino</b> por recorrer para alcanzar a sus rivales. <b>Firefox lucha inagotablemente contra Chrome</b>, mientras que <b>Safari</b> es considerado el nuevo 
+		<i>Internet Explorer</i> de esta época.
+
+  </div> 
+  
+  <div class="gallery">
+  	<img src="../images/opera-edge.png" alt="Opera y Edge" width="50%" height="50%">
+  	<div class="desc">El Navegador Opera tiene características que lo hacen auténtico, mientras que Edge le falta mucho camino por recorrer </div>
+	</div>
+  	     
+  <button class="btn success poss1" onclick= "location.href = '8 - la-infraestructura-de-la-web.html'" >Regresar</button>
+  <button class="btn success poss2" onclick= "location.href = '10 - la-evolucion-es-lo-mas-esencial.html'" >Siguiente</button>
+  
+  
+  <div class="desc black"> <br> <br> <br> <br> <br> Investigado y Programado por: Joel Alfonso Álvarez del Castillo Romo</div>
+  
+  
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "320px";
+  document.getElementById("main").style.marginLeft = "320px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+}
+</script>
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>
